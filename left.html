@@ -5064,7 +5064,7 @@ font-weight: 700;
 
 .enrollment-info-row {
 display: grid;
-grid-template-columns: repeat(4, 1fr);
+grid-template-columns: repeat(5, 1fr);
 gap: 24px;
 margin-bottom: 24px;
 }
@@ -5660,6 +5660,38 @@ font-size: 16px;
 font-weight: 400;
 color: var(--text-color);
 word-wrap: break-word;
+}
+
+.total-units-box {
+border: 1px solid #ccc;
+padding: 15px;
+border-radius: 8px;
+background: #f9f9f9;
+text-align: center;
+width: 200px;
+margin: 10px auto;
+}
+
+.units-value {
+font-size: 24px;
+font-weight: bold;
+color: var(--primary);
+margin-bottom: 10px;
+}
+
+.units-divider {
+margin: 10px 0;
+border: none;
+border-top: 1px solid #ccc;
+}
+
+.units-title {
+font-size: 14px;
+font-weight: 600;
+color: var(--text-secondary);
+margin-top: 10px;
+text-transform: uppercase;
+letter-spacing: 0.5px;
 }
 
 /* Responsive Design for Course Section */
@@ -7259,19 +7291,19 @@ Bgy. San Roque, Antipolo City, Rizal
     
     
     
-<div class="stat-card" style="width:50% margin:6px" >
+<div class="stat-card" style="width:50%; margin:6px;" >
 <div class="stat-value">100%<div class="progress-bar"><div style="width: 100%; height: 100%; background-color: green; border-radius: 4px;"></div></div></div>
 <div class="stat-label">1st Year</div>
 </div>
-<div class="stat-card" style="width:50% margin:6px" >
+<div class="stat-card" style="width:50%; margin:6px;" >
 <div class="stat-value">100%<div class="progress-bar"><div style="width: 100%; height: 100%; background-color: green; border-radius: 4px;"></div></div></div>
 <div class="stat-label">2nd Year</div>
 </div>
-<div class="stat-card" style="width:50% margin:6px" >
+<div class="stat-card" style="width:50%; margin:6px;" >
 <div class="stat-value">80%<div class="progress-bar"><div style="width: 80%; height: 100%; background-color: yellow; border-radius: 4px;"></div></div></div>
 <div class="stat-label">3rd Year</div>
 </div>
-<div class="stat-card" style="width:50% margin:6px" >
+<div class="stat-card" style="width:50%; margin:6px;" >
 <div class="stat-value">in progress<div class="progress-bar"><div style="width: 90%; height: 100%; background-color: yellow; border-radius: 4px;"></div></div></div>
 <div class="stat-label">4th Year</div>
 </div>
@@ -8482,6 +8514,13 @@ Digital credentials are secure, verifiable electronic documents that certify a s
 <div class="enrollment-field enrollment-field-empty"></div>
 <div class="enrollment-field enrollment-field-empty"></div>
 
+<!-- Total Units Parallel Box -->
+<div class="total-units-box">
+<div class="units-value" id="total-units">0</div>
+<hr class="units-divider">
+<h4 class="units-title">Total Units Parallel</h4>
+</div>
+
 <!-- Enrollment Date/Time Box - 4th column position -->
 <div class="enrollment-datetime-box-grid">
 <div class="datetime-content">
@@ -8564,26 +8603,58 @@ Digital credentials are secure, verifiable electronic documents that certify a s
 
 <div class="course-field">
 <label class="field-label"><i class="fas fa-book"></i> Title</label>
-<span class="field-value">SDF04</span>
-<span class="field-value">SDF04</span>
+<span class="field-value"><input type="checkbox" style="transform: scale(1.2); accent-color: #667eea;"> &nbsp;SDF04</span>
+<span class="field-value"><input type="checkbox" style="transform: scale(1.2); accent-color: #667eea;"> &nbsp;SDF04</span>
+<hr>
+<span class="field-value"><input type="checkbox" style="transform: scale(1.2); accent-color: #667eea;"> &nbsp;WS1</span>
+
+<span class="field-value"><input type="checkbox" style="transform: scale(1.2); accent-color: #667eea;"> &nbsp;WS1</span>
+<hr>
+<span class="field-value"><input type="checkbox" style="transform: scale(1.2); accent-color: #667eea;"> &nbsp;PE1</span>
+
+<span class="field-value"><input type="checkbox" style="transform: scale(1.2); accent-color: #667eea;"> &nbsp;PE1</span>
 </div>
 <div class="course-field">
 <label class="field-label"><i class="fas fa-book"></i> Title</label>
 <span class="field-value">Database Management</span>
 <span class="field-value">Database Management</span>
+<hr>
+<span class="field-value">Software Management</span>
+<span class="field-value">Software Management</span>
+<hr>
+<span class="field-value">Physical Education1</span>
+<span class="field-value">Physical Education1</span>
 </div>
 <div class="course-field">
 <label class="field-label"><i class="fas fa-tag"></i> Type</label>
 <span class="field-value">Major</span>
 <span class="field-value">Major</span>
+<hr>
+<span class="field-value">Major</span>
+<span class="field-value">Major</span>
+<hr>
+<span class="field-value">Core</span>
+<span class="field-value">Core</span>
 </div>
 <div class="course-field">
 <label class="field-label"><i class="fas fa-calculator"></i> Units</label>
 <span class="field-value">3</span>
 <span class="field-value">3</span>
+<hr>
+<span class="field-value">3</span>
+<span class="field-value">3</span>
+<hr>
+<span class="field-value">1</span>
+<span class="field-value">1</span>
 </div>
 <div class="course-field">
 <label class="field-label"><i class="fas fa-clock"></i> Time</label>
+<span class="field-value">7:30 AM - 10:30 AM</span>
+<span class="field-value">10:30 AM - 12:00 PM</span>
+<hr>
+<span class="field-value">7:30 AM - 10:30 AM</span>
+<span class="field-value">10:30 AM - 12:00 PM</span>
+<hr>
 <span class="field-value">7:30 AM - 10:30 AM</span>
 <span class="field-value">10:30 AM - 12:00 PM</span>
 </div>
@@ -8591,16 +8662,34 @@ Digital credentials are secure, verifiable electronic documents that certify a s
 <label class="field-label"><i class="fas fa-calendar-day"></i> Day</label>
 <span class="field-value">M/TH</span>
 <span class="field-value">M/TH</span>
+<hr>
+<span class="field-value">W/S</span>
+<span class="field-value">W/S</span>
+<hr>
+<span class="field-value">T/F</span>
+<span class="field-value">T/F</span>
 </div>
 <div class="course-field">
 <label class="field-label"><i class="fas fa-graduation-cap"></i> Program</label>
 <span class="field-value">BSIT</span>
 <span class="field-value">COMSCIE</span>
+<hr>
+<span class="field-value">BSIT</span>
+<span class="field-value">ENGINEERING</span>
+<hr>
+<span class="field-value">BSIT</span>
+<span class="field-value">BSIT</span>
 </div>
 <div class="course-field">
 <label class="field-label"><i class="fas fa-users"></i> Available Slot(s)</label>
 <span class="field-value">39/40</span>
 <span class="field-value">20/35</span>
+<hr>
+<span class="field-value">30/40</span>
+<span class="field-value">25/35</span>
+<hr>
+<span class="field-value">39/40</span>
+<span class="field-value">29/35</span>
 </div>
 </div>
 </div>
@@ -11891,6 +11980,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Function to select course by clicking the row
+function selectCourse() {
+    const row = document.querySelector('.course-info-row');
+    row.classList.toggle('selected');
+}
+
+// Function to select field by clicking the field-value
+function selectField(element) {
+    element.classList.toggle('selected-field');
+    const row = element.closest('.course-info-row');
+    const fields = row.querySelectorAll('.course-field');
+    const unitsField = fields[3]; // 4th field is Units
+    const unitsSpan = unitsField.querySelector('.field-value');
+    const units = parseInt(unitsSpan.textContent) || 0;
+    const totalElement = document.getElementById('total-units');
+    let total = parseInt(totalElement.textContent) || 0;
+    if (element.classList.contains('selected-field')) {
+        total += units;
+    } else {
+        total -= units;
+    }
+    totalElement.textContent = total;
+}
+
 // Track downloads for each report
 const downloadedReports = {
     physicalExam: false,
@@ -12280,6 +12393,31 @@ if (mainContentEl) mainContentEl.classList.add('with-fixed-theme');
 // ignore
 }
 })();
+
+// Course checkboxes logic
+const courseCheckboxes = document.querySelectorAll('.course-info-row input[type="checkbox"]');
+
+courseCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', function() {
+        // For mutual exclusion: uncheck all others
+        courseCheckboxes.forEach(cb => {
+            if (cb !== this) cb.checked = false;
+        });
+
+        // Update total units
+        const totalElement = document.getElementById('total-units');
+        let total = 0;
+        courseCheckboxes.forEach(cb => {
+            if (cb.checked) {
+                const index = Array.from(courseCheckboxes).indexOf(cb);
+                const unitsSpans = document.querySelectorAll('.course-info-row .course-field:nth-child(4) .field-value');
+                const units = parseInt(unitsSpans[index].textContent) || 0;
+                total += units;
+            }
+        });
+        totalElement.textContent = total;
+    });
+});
 
 // Notification modal functionality
 const notificationBtn = document.getElementById('notification-btn');
@@ -14799,3 +14937,4 @@ document.addEventListener('keydown', function(e) {
 
 </body>
 </html>
+ 
